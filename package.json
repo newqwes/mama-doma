@@ -1,0 +1,14 @@
+{
+  "name": "mama-doma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/newqwes/mama-doma.git",
+  "author": "Nazar Ashirov <newnewqwes@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.26.11"
+  },
+  "scripts": {
+    "style": "sass --watch style/style.scss style/style.css"
+  }
+}
