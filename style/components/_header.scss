@@ -1,7 +1,8 @@
 .header {
     background-color: #555555;
-    padding: 15px 0;
+    padding: 10px 0;
     color: $color-text;
+    height: 100vh;
 }
 
 .wrapper__header {}
@@ -29,12 +30,12 @@
     a {
         color: $color-text;
         text-transform: uppercase;
-        transition: 0.5s ease;
+        @extend %transition;
         position: relative;
         line-height: 1;
         text-decoration: none;
         letter-spacing: .2rem;
-        font-size: 1.4rem;
+        @include font(1.4rem);
         line-height: 2rem;
 
         &:hover {
@@ -50,7 +51,7 @@
         height: 1px;
         background-color: $color-brand-accent;
         content: "";
-        transition: width 0.3s ease-out;
+        @extend %transition;
     }
 
     a:hover:after,
@@ -70,33 +71,40 @@
     }
 }
 
-.dropbtn {
-
-    transition: 0.5s ease;
-    letter-spacing: .2rem;
-    padding: 12px;
-    border-width: 1px;
-    border-radius: 5px;
-    border-color: $color-light;
-    border-style: solid;
-}
-
+//Регионы
 .dropdown {
+    @extend %transition;
+    margin-left: 5px;
+    padding: 10px 12px 7px;
     position: relative;
     display: inline-block;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0);
+
+    &:hover {
+        border-color: $color-light;
+    }
 }
 
 .dropdown-content {
+
+    @extend %transition;
     text-align: center;
-    display: none;
     position: absolute;
     background-color: $color-light;
     min-width: 140px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 10;
+    border-radius: 5px;
+    text-transform: uppercase;
+    opacity: 0;
+    padding: 10px;
+    top: 50px;
+    left: -20px;
+    @extend %transition;
 }
 
 .dropdown-content a {
+    @extend %transition;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -108,5 +116,64 @@
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    opacity: 1;
+}
+
+.dropbtn {
+    text-transform: uppercase;
+    @include font(1.1rem, 2.4rem);
+    margin-left: 5px;
+    letter-spacing: .1rem;
+
+
+}
+
+.region__now {
+    cursor: pointer;
+    display: flex;
+    border: 1px solid $color-brand-accent;
+    padding: 10px 12px 7px;
+    border-radius: 5px;
+    @include font(1.1rem, 2.4rem);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+
+    &_label {
+        padding-left: 5px;
+    }
+}
+
+.promo__title {
+    text-align: center;
+    padding-top: 20vh;
+}
+
+.promo__title-year {
+    @include font(1.4rem, 2.4rem);
+    letter-spacing: .15rem;
+    margin-bottom: 40px;
+}
+
+.promo__title-span {
+    cursor: pointer;
+    display: inline-block;
+    background-image: url("../../img/mama-doma-title.svg");
+    width: 763px;
+    height: 117px;
+    margin-bottom: 10px;
+}
+
+.promo__title-description {
+    text-transform: uppercase;
+    @include font(2.5rem, $weight: 500);
+    letter-spacing: .15rem;
+}
+
+.gif {
+    width: 200px;
+    position: absolute;
+    right: 5vw;
+    top: 25vh;
+    -webkit-animation: animation 3000ms linear both;
+    animation: animation 3000ms linear both;
 }

@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-size: 1.6rem;
+    @include font(1.6rem);
     font-family: 'Circe Rounded', Verdana, sans-serif;
 }
 
@@ -20,8 +20,5 @@ body {
 }
 
 h2 {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 3.4rem;
-    line-height: 4.6rem;
+    @include font(3.4rem, $weight: bold);
 }

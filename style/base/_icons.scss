@@ -1,0 +1,10 @@
+.ico {
+    cursor: pointer;
+    display: inline-block;
+
+    &_region {
+        background-image: url("../../img/icons/region.svg");
+        width: 15px;
+        height: 16px;
+    }
+}
