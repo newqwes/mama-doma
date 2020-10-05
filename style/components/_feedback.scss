@@ -1,0 +1,36 @@
+.feedback {
+    padding: 50px 0 80px;
+}
+
+.feedback__wrapper {
+    text-align: center;
+}
+
+.feedback__layout {
+    padding-top: 50px;
+}
+
+.feedback__links {
+    display: inline-block;
+    width: 560px;
+    height: 300px;
+    background-size: cover;
+    border-radius: 5px;
+    @extend %transition;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+    &:hover {
+        transform: scale(1.02);
+
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.link__to-menu {
+    background-image: url("../../img/menu.jpg");
+}
+
+.link__to-feedback {
+    background-image: url("../../img/feedback.jpg");
+
+}

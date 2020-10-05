@@ -28,7 +28,9 @@
 <body>
     <h1 class="visuallyhidden">Мама дома</h1>
     <header class="header">
-        <!-- https://www.youtube.com/watch?v=bcvMx7HoWz8 -->
+        <div class="header__intro">
+            <video class="header__intro-video" src="/video/videoplayback.mp4" autoplay muted loop></video>
+        </div>
         <div class="wrapper__header">
             <div class="header__top">
                 <a href="#" class="logo">
@@ -75,72 +77,70 @@
             </div>
         </div>
     </header>
-
     <section class="feedback">
-        <div class="wrapper">
-            <h2>- Наши ссылки -</h2>
-            <div class="feedback__to-menu">
-                <a href="#" class="link__to-menu">menu.by</a>
-            </div>
-            <div class="feedback__to-feedback">
-                <a href="#" class="link__to-feedback">оставь отзыв</a>
+        <div class="wrapper feedback__wrapper">
+            <h2>— Наши ссылки —</h2>
+            <div class="feedback__layout layout-2-column">
+                <div class="feedback__to-menu">
+                    <a href="#" class="feedback__links link__to-menu"></a>
+                </div>
+                <div class="feedback__to-feedback">
+                    <a href="#" class="feedback__links link__to-feedback"></a>
+                </div>
             </div>
         </div>
     </section>
     <section class="menu">
-        <div class="wrapper">
+        <div class="menu__wrapper wrapper">
             <div class="menu__title">
-                <h2>- Меню -</h2>
+                <h2>— Меню —</h2>
             </div>
-            <div class="layout-3-column">
+            <div class="menu__layout layout-3-column">
                 <div class="menu__item">
-                    <a href="#">Драники</a>
+                    <a class="menu__links menu__to-0" href="#"></a>
                 </div>
                 <div class="menu__item">
-                    <a href="#">Сытные блины</a>
+                    <a class="menu__links menu__to-1" href="#"></a>
                 </div>
                 <div class="menu__item">
-                    <a href="#">Горячее</a>
+                    <a class="menu__links menu__to-2" href="#"></a>
                 </div>
                 <div class="menu__item">
-                    <a href="#">Сладкие блины</a>
+                    <a class="menu__links menu__to-3" href="#"></a>
                 </div>
                 <div class="menu__item">
-                    <a href="#">Супы</a>
+                    <a class="menu__links menu__to-4" href="#"></a>
                 </div>
                 <div class="menu__item">
-                    <a href="#">Напитки</a>
+                    <a class="menu__links menu__to-5" href="#"></a>
                 </div>
             </div>
         </div>
     </section>
     <section class="about-us">
-        <div class="wrapper">
-            <div class="work">
-                <div class="work__logo">
-                    <img src="#" alt="мама дома" />
-                </div>
-                <h2>С нами приятно работать!</h2>
+        <div class="about-us__wrapper wrapper layout-2-column">
+            <div class="about-us__work about-us__items">
+                <a href="#" class="logo">
+                    <img src="/img/newLogo.PNG" alt="мама дома">
+                </a>
+                <h3>С нами приятно работать!</h3>
                 <span>Станьте частью нашей команды</span>
-                <div class="work__button">
-                    <button class="about-us__button">Оставьте заявку</button>
-                </div>
-                <div class="instagram">
-                    <div class="instagram__logo">
-                        <img src="#" alt="инстаграм" />
-                    </div>
-                    <h3>Наш инстаграм</h3>
-                    <span>Подписывайтесь, и Вам плюс в карму</span>
-                    <div class="work__button">
-                        <button class="about-us__button">Перейти в инстаграмм</button>
-                    </div>
-                </div>
+                <button class="about-us__button">Оставьте заявку</button>
             </div>
+            <div class="about-us__instagram about-us__items">
+                <a href="#" class="logo_instagram">
+                    <img src="/img/icons/instagram.png" alt="instagram">
+                </a>
+                <h3>Наш инстаграм</h3>
+                <span>Подписывайтесь, и Вам плюс в карму</span>
+                <button class="about-us__button">Перейти в инстаграмм</button>
+            </div>
+        </div>
     </section>
     <section class="map">
-        <div class="wrapper">
+        <div class="map__wrapper wrapper">
             <div class="map__title">
-                <h2>- Наши рестораны -</h2>
+                <h2>— Наши рестораны на фудкортах —</h2>
             </div>
             <div class="map__yandex">
                 Карта яндекс с метками
@@ -148,10 +148,8 @@
         </div>
     </section>
     <footer class="footer">
-        <div class="wrapper">
-            <div class="footer__logo">
-                <img src="#" alt="logo">
-            </div>
+        <div class="footer__wrapper wrapper">
+            <span class="footer__logo"></span>
             <div class="footer__contacts">
                 <div class="footer__mail">
                     <span class="ico ico_mail"></span>

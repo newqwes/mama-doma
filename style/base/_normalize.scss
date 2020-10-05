@@ -386,6 +386,12 @@ article {
     display: block;
 }
 
-* {
+*,
+::before,
+::after {
     box-sizing: border-box;
+}
+
+h3 {
+    margin: 0;
 }

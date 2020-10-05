@@ -1,0 +1,22 @@
+.footer {
+    background-color: $color-brand-second;
+    padding: 40px 0;
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__contacts {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    width: 212px;
+    height: 33px;
+    background-image: url("../../img/mama-doma-title.svg");
+    background-repeat: no-repeat;
+}

@@ -5,9 +5,13 @@
 @import 'utils/bonce';
 @import 'base/base';
 @import 'base/icons';
+@import 'abstract/columns';
 @import 'base/buttons';
 @import 'layouts/wrapper';
 
 @import 'components/header';
+@import 'components/feedback';
 @import 'components/menu';
+@import 'components/aboutUs';
 @import 'components/map';
+@import 'components/footer';

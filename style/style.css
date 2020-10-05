@@ -345,11 +345,19 @@ article {
   display: block;
 }
 
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
-.dropdown-content a, .dropdown-content, .dropdown, .navigatin__link a:after,
+h3 {
+  margin: 0;
+}
+
+.about-us__items::after, .about-us__items::before, .about-us__items button, .about-us__items a,
+.about-us__items h3,
+.about-us__items span, .menu__links, .feedback__links, .dropdown-content a, .dropdown-content, .dropdown, .navigatin__link a:after,
 .header__language a:after, .navigatin__link a,
 .header__language a {
   transition: all 0.3s ease-out;
@@ -536,10 +544,20 @@ body {
 }
 
 h2 {
-  font-size: 3.4rem;
+  font-size: 3.8rem;
   font-weight: bold;
   font-style: normal;
-  line-height: 3.4rem;
+  line-height: 3.8rem;
+  color: #362823;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 3.2rem;
+  color: #ffffff;
 }
 
 .ico {
@@ -552,16 +570,55 @@ h2 {
   height: 16px;
 }
 
+.logo_instagram img {
+  width: 50px;
+}
+
+.layout-2-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.layout-2-column > * {
+  flex-basis: 48%;
+}
+
+.layout-3-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.layout-3-column > * {
+  flex-basis: 30%;
+}
+
+.about-us__button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  color: #362823;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.4rem;
+  letter-spacing: 0.1rem;
+  background-color: #fecc16;
+  border-radius: 40px;
+  padding: 15px;
+}
+.about-us__button:hover {
+  background-color: #ffd439;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: auto;
 }
 
 .header {
-  background-color: #555555;
   padding: 10px 0;
   color: #ffffff;
-  height: 100vh;
 }
 
 .header__top,
@@ -736,12 +793,233 @@ h2 {
   animation: animation 3000ms linear both;
 }
 
+.header {
+  height: 100vh;
+}
+
+.header__intro {
+  z-index: -5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0a0808 url(../../img/IMG_8164.JPG) no-repeat center center;
+  background-size: cover;
+}
+.header__intro::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header__intro-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+.feedback {
+  padding: 50px 0 80px;
+}
+
+.feedback__wrapper {
+  text-align: center;
+}
+
+.feedback__layout {
+  padding-top: 50px;
+}
+
+.feedback__links {
+  display: inline-block;
+  width: 560px;
+  height: 300px;
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.feedback__links:hover {
+  transform: scale(1.02);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.link__to-menu {
+  background-image: url("../../img/menu.jpg");
+}
+
+.link__to-feedback {
+  background-image: url("../../img/feedback.jpg");
+}
+
 .menu {
+  padding: 80px 0;
   background-color: #fecc16;
+  background-image: url(../../img/bg_line-uzor_2.png), url(../../img/bg_line-uzor.png);
+  background-size: 120% 60px;
+  background-repeat: no-repeat;
+  background-position: top, bottom;
+}
+
+.menu__wrapper {
+  text-align: center;
+}
+
+.menu__item {
+  margin-bottom: 50px;
+}
+
+.menu__layout {
+  margin: 50px 0;
+}
+
+.menu__links {
+  display: inline-block;
+  width: 360px;
+  height: 200px;
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
+}
+.menu__links:hover {
+  transform: scale(1.02);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu__to-0 {
+  background-image: url("../../img/menu_draniki.jpg");
+}
+
+.menu__to-1 {
+  background-image: url("../../img/menu_bliny.jpg");
+}
+
+.menu__to-2 {
+  background-image: url("../../img/menu_goracee.jpg");
+}
+
+.menu__to-3 {
+  background-image: url("../../img/menu_sladkie-bliny.jpg");
+}
+
+.menu__to-4 {
+  background-image: url("../../img/menu_sup.jpg");
+}
+
+.menu__to-5 {
+  background-image: url("../../img/menu_napitki.jpg");
+}
+
+.about-us {
+  padding: 120px 0;
+  color: #ffffff;
+}
+
+.about-us__items {
+  border-radius: 5px;
+  text-align: center;
+  height: 360px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.about-us__items a,
+.about-us__items h3,
+.about-us__items span {
+  transform: translateY(20px);
+  margin-top: 10px;
+}
+.about-us__items button {
+  cursor: pointer;
+  transform: translateY(-20px);
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 30px;
+}
+.about-us__items::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  bottom: 5%;
+  right: 5%;
+  border-top: solid 2px #fecc16;
+  border-bottom: solid 2px #fecc16;
+  transform: scaleX(0);
+}
+.about-us__items::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  bottom: 5%;
+  right: 5%;
+  border-left: solid 2px #fecc16;
+  border-right: solid 2px #fecc16;
+  transform: scaleY(0);
+}
+.about-us__items:hover::before, .about-us__items:hover::after {
+  transform: scale(1);
+}
+.about-us__items:hover a, .about-us__items:hover h3, .about-us__items:hover button, .about-us__items:hover span {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+.about-us__work {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/about_us_people.JPG");
+  background-size: cover;
+}
+
+.about-us__instagram {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/about_us_instagram.JPG") bottom;
+  background-size: cover;
 }
 
 .map {
   background-color: #fecc16;
+  padding: 80px 0;
+}
+
+.map__wrapper {
+  text-align: center;
+}
+
+.footer {
+  background-color: #362823;
+  padding: 40px 0;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  width: 212px;
+  height: 33px;
+  background-image: url("../../img/mama-doma-title.svg");
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=style.css.map */

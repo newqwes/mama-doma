@@ -20,5 +20,12 @@ body {
 }
 
 h2 {
-    @include font(3.4rem, $weight: bold);
+    @include font(3.8rem, $weight: bold);
+    color: $color-brand-second;
+    text-transform: uppercase;
+}
+
+h3 {
+    @include font(3.2rem, $weight: bold);
+    color: $color-text;
 }

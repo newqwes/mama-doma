@@ -1,3 +1,60 @@
 .menu {
+    padding: 80px 0;
     background-color: $color-brand-accent;
+    background-image: url(../../img/bg_line-uzor_2.png), url(../../img/bg_line-uzor.png);
+    background-size: 120% 60px;
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+}
+
+.menu__wrapper {
+    text-align: center;
+}
+
+.menu__item {
+    margin-bottom: 50px;
+}
+
+.menu__layout {
+    margin: 50px 0;
+}
+
+.menu__links {
+    display: inline-block;
+    width: 360px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 5px;
+    @extend %transition;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
+
+    &:hover {
+        transform: scale(1.02);
+
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.menu__to-0 {
+    background-image: url("../../img/menu_draniki.jpg");
+}
+
+.menu__to-1 {
+    background-image: url("../../img/menu_bliny.jpg");
+}
+
+.menu__to-2 {
+    background-image: url("../../img/menu_goracee.jpg");
+}
+
+.menu__to-3 {
+    background-image: url("../../img/menu_sladkie-bliny.jpg");
+}
+
+.menu__to-4 {
+    background-image: url("../../img/menu_sup.jpg");
+}
+
+.menu__to-5 {
+    background-image: url("../../img/menu_napitki.jpg");
 }

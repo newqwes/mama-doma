@@ -1,0 +1,84 @@
+.about-us {
+    padding: 120px 0;
+    color: $color-text;
+}
+
+.about-us__items {
+    border-radius: 5px;
+    text-align: center;
+    height: 360px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    a,
+    h3,
+    span {
+        @extend %transition;
+        transform: translateY(20px);
+        margin-top: 10px;
+    }
+
+    button {
+        cursor: pointer;
+        @extend %transition;
+        transform: translateY(-20px);
+        opacity: 0;
+        visibility: hidden;
+        margin-top: 30px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        bottom: 5%;
+        right: 5%;
+        border-top: solid 2px $color-brand-accent;
+        border-bottom: solid 2px $color-brand-accent;
+        @extend %transition;
+        transform: scaleX(0);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        bottom: 5%;
+        right: 5%;
+        border-left: solid 2px $color-brand-accent;
+        border-right: solid 2px $color-brand-accent;
+        @extend %transition;
+        transform: scaleY(0);
+    }
+
+    &:hover::before,
+    &:hover::after {
+        transform: scale(1);
+    }
+
+    &:hover a,
+    &:hover h3,
+    &:hover button,
+    &:hover span {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        z-index: 10;
+    }
+}
+
+.about-us__work {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../img/about_us_people.JPG');
+    background-size: cover;
+}
+
+.about-us__instagram {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../img/about_us_instagram.JPG') bottom;
+    background-size: cover;
+}
