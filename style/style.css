@@ -357,7 +357,7 @@ h3 {
 
 .about-us__items::after, .about-us__items::before, .about-us__items button, .about-us__items a,
 .about-us__items h3,
-.about-us__items span, .menu__links, .feedback__links, .dropdown-content a, .dropdown-content, .dropdown, .navigatin__link a:after,
+.about-us__items span, .feedback__links, .dropdown-content a, .dropdown-content, .dropdown, .navigatin__link a:after,
 .header__language a:after, .navigatin__link a,
 .header__language a {
   transition: all 0.3s ease-out;
@@ -519,6 +519,19 @@ h3 {
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   }
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fecc16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #362823;
+  border-radius: 5px;
+}
+
 html {
   font-size: 10px;
 }
@@ -568,6 +581,18 @@ h3 {
   background-image: url("../../img/icons/region.svg");
   width: 15px;
   height: 16px;
+}
+.ico_mail {
+  background-image: url("../../img/icons/mail.svg");
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+}
+.ico_phone {
+  background-image: url("../../img/icons/phone.svg");
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
 }
 
 .logo_instagram img {
@@ -764,6 +789,14 @@ h3 {
   line-height: 2.4rem;
   letter-spacing: 0.15rem;
   margin-bottom: 40px;
+  transform: translate(0px, 120%);
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+}
+.promo__title-year._active {
+  transform: translate(0px, 0px);
+  transition: all 0.8s ease 0.5s;
+  opacity: 1;
 }
 
 .promo__title-span {
@@ -773,6 +806,14 @@ h3 {
   width: 763px;
   height: 117px;
   margin-bottom: 10px;
+  transform: translate(0px, 120%);
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+}
+.promo__title-span._active {
+  transform: translate(0px, 0px);
+  transition: all 0.8s ease 0s;
+  opacity: 1;
 }
 
 .promo__title-description {
@@ -782,6 +823,14 @@ h3 {
   font-style: normal;
   line-height: 2.5rem;
   letter-spacing: 0.15rem;
+  transform: translate(-20%, 0);
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+}
+.promo__title-description._active {
+  transform: translate(0px, 0px);
+  transition: all 0.8s ease 0.5s;
+  opacity: 1;
 }
 
 .gif {
@@ -849,17 +898,37 @@ h3 {
   border-radius: 5px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-.feedback__links:hover {
+
+.link__to-menu {
+  background-image: url("../../img/menu.jpg");
+  transform: translate(-20%, 0);
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+}
+.link__to-menu._active {
+  transform: translate(0px, 0px);
+  transition: all 0.8s ease 0.1s;
+  opacity: 1;
+}
+.link__to-menu._active:hover {
   transform: scale(1.02);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 
-.link__to-menu {
-  background-image: url("../../img/menu.jpg");
-}
-
 .link__to-feedback {
   background-image: url("../../img/feedback.jpg");
+  transform: translate(20%, 0);
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+}
+.link__to-feedback._active {
+  transform: translate(0px, 0px);
+  transition: all 0.8s ease 0.1s;
+  opacity: 1;
+}
+.link__to-feedback._active:hover {
+  transform: scale(1.02);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 .menu {
@@ -890,6 +959,13 @@ h3 {
   background-size: cover;
   border-radius: 5px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
+  transform: scale(0);
+  transition: all 0.8s ease;
+  opacity: 0;
+}
+.menu__links._active {
+  transform: scale(1);
+  opacity: 1;
 }
 .menu__links:hover {
   transform: scale(1.02);
@@ -984,35 +1060,64 @@ h3 {
 .about-us__work {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/about_us_people.JPG");
   background-size: cover;
+  transform: translate(-20%, 0);
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+}
+.about-us__work._active {
+  transform: translate(0px, 0px);
+  transition: all 0.8s ease 0.1s;
+  opacity: 1;
 }
 
 .about-us__instagram {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/about_us_instagram.JPG") bottom;
   background-size: cover;
+  transform: translate(20%, 0);
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+}
+.about-us__instagram._active {
+  transform: translate(0px, 0px);
+  transition: all 0.8s ease 0.1s;
+  opacity: 1;
 }
 
 .map {
   background-color: #fecc16;
   padding: 80px 0;
+  background-image: url(../../img/bg_line-uzor_2.png), url(../../img/bg_line-uzor_black.png);
+  background-size: 120% 60px;
+  background-repeat: no-repeat;
+  background-position: top, bottom;
 }
 
 .map__wrapper {
   text-align: center;
 }
 
+.map__yandex {
+  margin: 80px 0;
+}
+
 .footer {
   background-color: #362823;
-  padding: 40px 0;
+  padding: 40px 0 10px;
 }
 
-.footer__wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
+.footer__wrapper,
 .footer__contacts {
   display: flex;
   justify-content: space-between;
+}
+.footer__wrapper a,
+.footer__contacts a {
+  color: #fecc16;
+  display: flex;
+  font-size: 1.8rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.4rem;
 }
 
 .footer__logo {
@@ -1020,6 +1125,26 @@ h3 {
   height: 33px;
   background-image: url("../../img/mama-doma-title.svg");
   background-repeat: no-repeat;
+}
+
+.footer__items {
+  margin-left: 20px;
+}
+
+.footer__wrapper_developer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__wrapper_developer span {
+  color: #fffaf6;
+}
+.footer__wrapper_developer a {
+  color: #fecc16;
+  font-size: 1.8rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

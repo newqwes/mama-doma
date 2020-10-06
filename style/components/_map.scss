@@ -1,8 +1,16 @@
 .map {
     background-color: $color-brand-accent;
     padding: 80px 0;
+    background-image: url(../../img/bg_line-uzor_2.png), url(../../img/bg_line-uzor_black.png);
+    background-size: 120% 60px;
+    background-repeat: no-repeat;
+    background-position: top, bottom;
 }
 
 .map__wrapper {
     text-align: center;
+}
+
+.map__yandex {
+    margin: 80px 0;
 }

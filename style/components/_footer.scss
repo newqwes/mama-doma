@@ -1,17 +1,19 @@
 .footer {
     background-color: $color-brand-second;
-    padding: 40px 0;
+    padding: 40px 0 10px;
+
 }
 
-.footer__wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
+.footer__wrapper,
 .footer__contacts {
-
     display: flex;
     justify-content: space-between;
+
+    a {
+        color: $color-brand-accent;
+        display: flex;
+        @include font(1.8rem, 2.4rem);
+    }
 }
 
 .footer__logo {
@@ -19,4 +21,23 @@
     height: 33px;
     background-image: url("../../img/mama-doma-title.svg");
     background-repeat: no-repeat;
+}
+
+.footer__items {
+    margin-left: 20px;
+}
+
+.footer__wrapper_developer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+        color: $color-light;
+    }
+
+    a {
+        color: $color-brand-accent;
+        @include font(1.8rem, 2.4rem);
+    }
 }

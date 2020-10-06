@@ -19,18 +19,36 @@
     @extend %transition;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
-    &:hover {
-        transform: scale(1.02);
 
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
-    }
 }
 
 .link__to-menu {
     background-image: url("../../img/menu.jpg");
+    @include appearancEffect($translate1: -20%, $translate2: 0);
+
+    &._active {
+        @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
+
+        &:hover {
+            transform: scale(1.02);
+
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
+        }
+    }
 }
 
 .link__to-feedback {
     background-image: url("../../img/feedback.jpg");
+    @include appearancEffect($translate1: 20%, $translate2: 0);
+
+    &._active {
+        @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.1s);
+
+        &:hover {
+            transform: scale(1.02);
+
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
+        }
+    }
 
 }
