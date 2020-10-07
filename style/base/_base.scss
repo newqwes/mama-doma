@@ -7,6 +7,10 @@ body {
     font-family: 'Circe Rounded', Verdana, sans-serif;
 }
 
+body.lock {
+    overflow: hidden;
+}
+
 .visuallyhidden {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
