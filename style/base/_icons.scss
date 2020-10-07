@@ -23,6 +23,23 @@
     }
 }
 
+.logo img {
+    width: 70px;
+}
+
 .logo_instagram img {
     width: 50px;
+}
+
+.arrow-to-top {
+    width: 70px;
+    height: 70px;
+    top: 80vh;
+    right: 20px;
+    position: fixed;
+    display: none;
+
+    img {
+        width: 40px;
+    }
 }

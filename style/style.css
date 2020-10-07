@@ -595,8 +595,24 @@ h3 {
   margin-right: 8px;
 }
 
+.logo img {
+  width: 70px;
+}
+
 .logo_instagram img {
   width: 50px;
+}
+
+.arrow-to-top {
+  width: 70px;
+  height: 70px;
+  top: 80vh;
+  right: 20px;
+  position: fixed;
+  display: none;
+}
+.arrow-to-top img {
+  width: 40px;
 }
 
 .layout-2-column {
@@ -653,10 +669,6 @@ h3 {
   justify-content: space-around;
 }
 
-.logo img {
-  width: 70px;
-}
-
 .navigatin {
   display: flex;
 }
@@ -682,6 +694,10 @@ h3 {
 }
 .navigatin__link a:hover,
 .header__language a:hover {
+  color: #fecc16;
+}
+.navigatin__link .header__language_active,
+.header__language .header__language_active {
   color: #fecc16;
 }
 .navigatin__link a:after,

@@ -10,10 +10,6 @@
     justify-content: space-around;
 }
 
-.logo img {
-    width: 70px;
-}
-
 .navigatin {
     display: flex;
 }
@@ -37,6 +33,11 @@
         &:hover {
             color: $color-brand-accent;
         }
+
+    }
+
+    .header__language_active {
+        color: $color-brand-accent;
     }
 
     a:after {
