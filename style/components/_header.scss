@@ -3,9 +3,6 @@
     color: $color-text;
 }
 
-.menu-page-header {
-    background-color: $color-brand-second;
-}
 
 .header__top,
 .header__region {
@@ -14,25 +11,12 @@
     justify-content: space-around;
 }
 
-.menu-page__navigatin {
-    margin: 0;
-}
-
-.menu-page-header__wrapper {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-around;
-}
-
-.navigatin,
-.menu-page__navigatin {
+.navigatin {
     display: flex;
 }
 
 .navigatin__link,
-.header__language,
-.menu-page__link {
+.header__language {
     list-style-type: none;
     padding: 0 20px;
 
@@ -63,7 +47,7 @@
         width: 0;
         height: 1px;
         background-color: $color-brand-accent;
-        content: "";
+        content: '';
         @extend %transition;
     }
 
@@ -173,7 +157,7 @@
 .promo__title-span {
     cursor: pointer;
     display: inline-block;
-    background-image: url("../../img/mama-doma-title.svg");
+    background-image: url('../../img/mama-doma-title.svg');
     width: 763px;
     height: 117px;
     margin-bottom: 10px;
@@ -227,7 +211,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        content: "";
+        content: '';
         z-index: 1;
         background-color: rgba(0, 0, 0, 0.5);
     }
