@@ -358,8 +358,10 @@ h3 {
 .about-us__items::after, .about-us__items::before, .about-us__items button, .about-us__items a,
 .about-us__items h3,
 .about-us__items span, .feedback__links, .dropdown-content a, .dropdown-content, .dropdown, .navigatin__link a:after,
-.header__language a:after, .navigatin__link a,
-.header__language a {
+.header__language a:after,
+.menu-page__link a:after, .navigatin__link a,
+.header__language a,
+.menu-page__link a {
   transition: all 0.3s ease-out;
 }
 
@@ -666,6 +668,10 @@ h3 {
   color: #ffffff;
 }
 
+.menu-page-header {
+  background-color: #362823;
+}
+
 .header__top,
 .header__region {
   display: flex;
@@ -673,17 +679,30 @@ h3 {
   justify-content: space-around;
 }
 
-.navigatin {
+.menu-page__navigatin {
+  margin: 0;
+}
+
+.menu-page-header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navigatin,
+.menu-page__navigatin {
   display: flex;
 }
 
 .navigatin__link,
-.header__language {
+.header__language,
+.menu-page__link {
   list-style-type: none;
   padding: 0 20px;
 }
 .navigatin__link a,
-.header__language a {
+.header__language a,
+.menu-page__link a {
   color: #ffffff;
   text-transform: uppercase;
   position: relative;
@@ -697,15 +716,18 @@ h3 {
   line-height: 2rem;
 }
 .navigatin__link a:hover,
-.header__language a:hover {
+.header__language a:hover,
+.menu-page__link a:hover {
   color: #fecc16;
 }
 .navigatin__link .header__language_active,
-.header__language .header__language_active {
+.header__language .header__language_active,
+.menu-page__link .header__language_active {
   color: #fecc16;
 }
 .navigatin__link a:after,
-.header__language a:after {
+.header__language a:after,
+.menu-page__link a:after {
   display: block;
   position: absolute;
   left: 0;
@@ -717,7 +739,9 @@ h3 {
 .navigatin__link a:hover:after,
 .navigatin__link a:focus:after,
 .header__language a:hover:after,
-.header__language a:focus:after {
+.header__language a:focus:after,
+.menu-page__link a:hover:after,
+.menu-page__link a:focus:after {
   width: 100%;
 }
 
@@ -1256,6 +1280,10 @@ h3 {
   border-bottom: 4px solid #dfb213;
   color: white;
   font-size: 14px;
+  cursor: pointer;
+}
+.form-inner input[type=submit]:hover {
+  background: #fccd24;
 }
 
 .form-inner textarea {
