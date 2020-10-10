@@ -12,13 +12,16 @@
 
 .navigatin {
     display: flex;
+    padding: 0;
 }
 
 .navigatin__link,
 .header__language {
     list-style-type: none;
     padding: 0 20px;
-
+    @include media-pcsmall {
+        padding: 0 8px;
+    }
     a {
         color: $color-text;
         text-transform: uppercase;
@@ -29,7 +32,9 @@
         letter-spacing: 0.2rem;
         @include font(1.4rem);
         line-height: 2rem;
-
+        @include media-pcsmall {
+            @include font(1.3rem);
+        }
         &:hover {
             color: $color-brand-accent;
         }
@@ -83,6 +88,9 @@
 }
 
 .dropdown-content {
+    @include media-pcsmall {
+        left: -50px;
+    }
     @extend %transition;
     text-align: center;
     position: absolute;
@@ -159,22 +167,33 @@
     background-image: url('../../img/mama-doma-title.svg');
     width: 763px;
     height: 117px;
-    margin-bottom: 10px;
     @include appearancEffect();
-
     &._active {
         @include appearancEffect($translate2: 0px, $opacity: 1);
+    }
+    @include media-pcsmall {
+        width: 600px;
+        height: 90px;
+        background-size: cover;
+    }
+    @include media-laptop {
+        width: 500px;
+        height: 75px;
     }
 }
 
 .promo__title-description {
+    padding-top: 40px;
     text-transform: uppercase;
     @include font(2.5rem, $weight: 500);
     letter-spacing: 0.15rem;
-    @include appearancEffect($translate1: -20%, $translate2: 0);
+    @include appearancEffect($translate2: -20%, $translate1: 0);
 
     &._active {
         @include appearancEffect($translate2: 0px, $opacity: 1, $transition2: 0.5s);
+    }
+    @include media-pcsmall {
+        @include font(2.2rem, $weight: 500);
     }
 }
 
@@ -185,6 +204,12 @@
     top: 25vh;
     -webkit-animation: animation 3000ms linear both;
     animation: animation 3000ms linear both;
+    @include media-pcsmall {
+        width: 160px;
+    }
+    @include media-laptop {
+        width: 120px;
+    }
 }
 
 // intro video

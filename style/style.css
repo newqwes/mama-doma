@@ -370,6 +370,24 @@ a {
   transition: all 0.3s ease-out;
 }
 
+.layout-2-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.layout-2-column > * {
+  flex-basis: 49%;
+}
+
+.layout-3-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.layout-3-column > * {
+  flex-basis: 30%;
+}
+
 @-webkit-keyframes animation {
   0% {
     -webkit-transform: matrix3d(0.1, 0, 0, 0, 0, 0.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
@@ -711,29 +729,12 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
 }
 
 .arrow-to-top {
+  z-index: 10;
   width: 50px;
   height: 50px;
   top: 80vh;
   right: 30px;
   position: fixed;
-}
-
-.layout-2-column {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.layout-2-column > * {
-  flex-basis: 49%;
-}
-
-.layout-3-column {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.layout-3-column > * {
-  flex-basis: 30%;
 }
 
 .about-us__button {
@@ -755,9 +756,50 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   background-color: #ffd439;
 }
 
+.hamburger__line, .hamburger:after, .hamburger:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background: #fecc16;
+  border-radius: 5px;
+  height: 3px;
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  margin: 20px;
+  position: relative;
+  width: 32px;
+  height: 24px;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: inline-block;
+  }
+}
+.hamburger:before {
+  top: 0;
+  left: 0;
+}
+.hamburger:after {
+  bottom: 0;
+  left: 0;
+}
+
+.hamburger__line {
+  top: calc(50% - 1.5px);
+  left: 0;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: auto;
+}
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 0 45px;
+  }
 }
 
 .header {
@@ -774,12 +816,19 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
 
 .navigatin {
   display: flex;
+  padding: 0;
 }
 
 .navigatin__link,
 .header__language {
   list-style-type: none;
   padding: 0 20px;
+}
+@media (max-width: 1366px) {
+  .navigatin__link,
+.header__language {
+    padding: 0 8px;
+  }
 }
 .navigatin__link a,
 .header__language a {
@@ -794,6 +843,15 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   font-style: normal;
   line-height: 1.4rem;
   line-height: 2rem;
+}
+@media (max-width: 1366px) {
+  .navigatin__link a,
+.header__language a {
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3rem;
+  }
 }
 .navigatin__link a:hover,
 .header__language a:hover {
@@ -852,6 +910,11 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   padding: 10px;
   top: 50px;
   left: -20px;
+}
+@media (max-width: 1366px) {
+  .dropdown-content {
+    left: -50px;
+  }
 }
 
 .dropdown-content a {
@@ -924,7 +987,6 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   background-image: url("../../img/mama-doma-title.svg");
   width: 763px;
   height: 117px;
-  margin-bottom: 10px;
   transform: translate(0px, 120%);
   transition: all 0.8s ease 0s;
   opacity: 0;
@@ -934,15 +996,29 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   transition: all 0.8s ease 0s;
   opacity: 1;
 }
+@media (max-width: 1366px) {
+  .promo__title-span {
+    width: 600px;
+    height: 90px;
+    background-size: cover;
+  }
+}
+@media (max-width: 1024px) {
+  .promo__title-span {
+    width: 500px;
+    height: 75px;
+  }
+}
 
 .promo__title-description {
+  padding-top: 40px;
   text-transform: uppercase;
   font-size: 2.5rem;
   font-weight: 500;
   font-style: normal;
   line-height: 2.5rem;
   letter-spacing: 0.15rem;
-  transform: translate(-20%, 0);
+  transform: translate(0, -20%);
   transition: all 0.8s ease 0s;
   opacity: 0;
 }
@@ -950,6 +1026,14 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   transform: translate(0px, 0px);
   transition: all 0.8s ease 0.5s;
   opacity: 1;
+}
+@media (max-width: 1366px) {
+  .promo__title-description {
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 2.2rem;
+  }
 }
 
 .gif {
@@ -959,6 +1043,16 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   top: 25vh;
   -webkit-animation: animation 3000ms linear both;
   animation: animation 3000ms linear both;
+}
+@media (max-width: 1366px) {
+  .gif {
+    width: 160px;
+  }
+}
+@media (max-width: 1024px) {
+  .gif {
+    width: 120px;
+  }
 }
 
 .header {
@@ -1020,7 +1114,7 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
 
 .link__to-menu {
   background-image: url("../../img/menu.jpg");
-  transform: translate(-20%, 0);
+  transform: translate(0, -20%);
   transition: all 0.8s ease 0s;
   opacity: 0;
 }
@@ -1036,7 +1130,7 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
 
 .link__to-feedback {
   background-image: url("../../img/feedback.jpg");
-  transform: translate(20%, 0);
+  transform: translate(0, 20%);
   transition: all 0.8s ease 0s;
   opacity: 0;
 }
@@ -1179,7 +1273,7 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
 .about-us__work {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/about_us_people.JPG");
   background-size: cover;
-  transform: translate(-20%, 0);
+  transform: translate(0, -20%);
   transition: all 0.8s ease 0s;
   opacity: 0;
 }
@@ -1192,7 +1286,7 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
 .about-us__instagram {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/about_us_instagram.JPG") bottom;
   background-size: cover;
-  transform: translate(20%, 0);
+  transform: translate(0, 20%);
   transition: all 0.8s ease 0s;
   opacity: 0;
 }
@@ -1231,7 +1325,7 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
 .map__yandex {
   width: 100%;
   height: 500px;
-  transform: translate(20%, 0);
+  transform: translate(0, 20%);
   transition: all 0.8s ease 0s;
   opacity: 0;
 }
