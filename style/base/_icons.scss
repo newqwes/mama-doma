@@ -21,6 +21,24 @@
         height: 26px;
         margin-right: 8px;
     }
+    &_place {
+        background-image: url("../../img/icons/place.svg");
+        width: 20px;
+        height: 20px;
+    }
+    &_arrow {
+        background-image: url("../../img/icons/up-arrow.svg");
+        width: 50px;
+        height: 50px;
+        transform: rotate(180deg);
+        @extend %transition;
+        border-radius: 50%;
+        opacity: 0.8;
+        &:hover {
+            opacity: 1;
+            background-color: #fecc162a;
+        }
+    }
 }
 
 .logo img {
@@ -32,14 +50,9 @@
 }
 
 .arrow-to-top {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     top: 80vh;
-    right: 20px;
+    right: 30px;
     position: fixed;
-    display: none;
-
-    img {
-        width: 40px;
-    }
 }
