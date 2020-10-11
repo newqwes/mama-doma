@@ -1,6 +1,9 @@
 .header {
     padding: 10px 0;
     color: $color-text;
+    @include media-laptop {
+        text-align: right;
+    }
 }
 
 .header__top,
@@ -8,8 +11,21 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    @include media-tablet {
+        justify-content: space-between;
+        padding: 3%;
+    }
 }
-
+.header__region {
+    @include media-laptop {
+        display: none;
+    }
+}
+.header__navigation {
+    @include media-tablet {
+        display: none;
+    }
+}
 .navigatin {
     display: flex;
     padding: 0;

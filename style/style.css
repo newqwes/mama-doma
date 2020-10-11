@@ -756,7 +756,10 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   background-color: #ffd439;
 }
 
-.hamburger__line, .hamburger:after, .hamburger:before {
+.hamburger__line,
+.hamburger-region__line, .hamburger:after,
+.hamburger-region:after, .hamburger:before,
+.hamburger-region:before {
   content: "";
   position: absolute;
   display: inline-block;
@@ -766,30 +769,47 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   width: 100%;
 }
 
-.hamburger {
+.hamburger,
+.hamburger-region {
+  cursor: pointer;
   display: none;
   margin: 20px;
   position: relative;
   width: 32px;
   height: 24px;
 }
+.hamburger:before,
+.hamburger-region:before {
+  top: 0;
+  left: 0;
+}
+.hamburger:after,
+.hamburger-region:after {
+  bottom: 0;
+  left: 0;
+}
+
+.hamburger__line,
+.hamburger-region__line {
+  top: calc(50% - 1.5px);
+  left: 0;
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: inline-block;
   }
 }
-.hamburger:before {
-  top: 0;
-  left: 0;
-}
-.hamburger:after {
-  bottom: 0;
-  left: 0;
-}
 
-.hamburger__line {
-  top: calc(50% - 1.5px);
-  left: 0;
+@media (max-width: 1024px) {
+  .hamburger-region {
+    display: inline-block;
+  }
+}
+@media (max-width: 768px) {
+  .hamburger-region {
+    display: none;
+  }
 }
 
 .wrapper {
@@ -806,12 +826,36 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   padding: 10px 0;
   color: #ffffff;
 }
+@media (max-width: 1024px) {
+  .header {
+    text-align: right;
+  }
+}
 
 .header__top,
 .header__region {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+@media (max-width: 768px) {
+  .header__top,
+.header__region {
+    justify-content: space-between;
+    padding: 3%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__region {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__navigation {
+    display: none;
+  }
 }
 
 .navigatin {
