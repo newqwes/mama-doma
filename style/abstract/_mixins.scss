@@ -10,9 +10,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include media-pcsmall-1366 {
+        justify-content: space-around;
+    }
 
     > * {
         flex-basis: $width;
+
+        @include media-tablet-768 {
+            flex-basis: 100%;
+        }
     }
 }
 
@@ -21,27 +28,28 @@
     transition: all $transition1 ease $transition2;
     opacity: $opacity;
 }
-@mixin media-pcsmall {
+
+@mixin media-pcsmall-1366 {
     @media (max-width: $pc-small) {
         @content;
     }
 }
-@mixin media-laptop {
+@mixin media-laptop-1024 {
     @media (max-width: $media-laptop) {
         @content;
     }
 }
-@mixin media-tablet {
+@mixin media-tablet-768 {
     @media (max-width: $tablet-width) {
         @content;
     }
 }
-@mixin media-mobile {
+@mixin media-mobile-414 {
     @media (max-width: $mobile-big-width) {
         @content;
     }
 }
-@mixin media-mobilesmall {
+@mixin media-mobilesmall-320 {
     @media (max-width: $mobile-small-width) {
         @content;
     }

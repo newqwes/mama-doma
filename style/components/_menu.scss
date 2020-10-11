@@ -2,9 +2,24 @@
     padding: 80px 0;
     background-color: $color-brand-accent;
     background-image: url(../../img/bg_line-uzor_2.png), url(../../img/bg_line-uzor.png);
-    background-size: 120% 60px;
+    background-size: 120% 50px;
     background-repeat: no-repeat;
     background-position: top, bottom;
+    @include media-pcsmall-1366 {
+        background-size: 150% 50px;
+    }
+    @include media-laptop-1024 {
+        background-size: 210% 50px;
+    }
+    @include media-tablet-768 {
+        background-size: 350% 50px;
+    }
+    @include media-mobile-414 {
+        background-size: 480% 50px;
+    }
+    @include media-mobilesmall-320 {
+        background-size: 520% 50px;
+    }
 }
 
 .menu__wrapper {
@@ -29,7 +44,10 @@
     transform: scale(0);
     transition: all 0.8s ease;
     opacity: 0;
-
+    @include media-mobile-414 {
+        width: 300px;
+        height: 170px;
+    }
     &._active {
         transform: scale(1);
         opacity: 1;
@@ -42,25 +60,25 @@
 }
 
 .menu__to-0 {
-    background-image: url("../../img/menu_draniki.jpg");
+    background-image: url('../../img/menu_draniki.jpg');
 }
 
 .menu__to-1 {
-    background-image: url("../../img/menu_bliny.jpg");
+    background-image: url('../../img/menu_bliny.jpg');
 }
 
 .menu__to-2 {
-    background-image: url("../../img/menu_goracee.jpg");
+    background-image: url('../../img/menu_goracee.jpg');
 }
 
 .menu__to-3 {
-    background-image: url("../../img/menu_sladkie-bliny.jpg");
+    background-image: url('../../img/menu_sladkie-bliny.jpg');
 }
 
 .menu__to-4 {
-    background-image: url("../../img/menu_sup.jpg");
+    background-image: url('../../img/menu_sup.jpg');
 }
 
 .menu__to-5 {
-    background-image: url("../../img/menu_napitki.jpg");
+    background-image: url('../../img/menu_napitki.jpg');
 }

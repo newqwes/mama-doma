@@ -27,6 +27,12 @@ h2 {
     @include font(3.8rem, $weight: bold);
     color: $color-brand-second;
     text-transform: uppercase;
+    @include media-tablet-768 {
+        @include font(3.6rem, $weight: bold);
+    }
+    @include media-mobile-414 {
+        @include font(3.4rem, $weight: bold);
+    }
 }
 
 h3 {

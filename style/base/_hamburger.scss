@@ -34,15 +34,15 @@
     left: 0;
 }
 .hamburger {
-    @include media-tablet {
+    @include media-tablet-768 {
         display: inline-block;
     }
 }
 .hamburger-region {
-    @include media-laptop {
+    @include media-laptop-1024 {
         display: inline-block;
     }
-    @include media-tablet {
+    @include media-tablet-768 {
         display: none;
     }
 }
