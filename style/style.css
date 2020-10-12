@@ -638,6 +638,13 @@ h3 {
   color: #ffffff;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select:focus,
+textarea:focus,
+input:focus {
+    font-size: 16px;
+  }
+}
 ul.social__menu {
   margin: 0;
   align-items: center;
@@ -806,7 +813,7 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
 }
 
 .arrow-to-top {
-  z-index: 10;
+  z-index: 2;
   width: 50px;
   height: 50px;
   top: 80vh;
@@ -1879,6 +1886,7 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   overflow-y: auto;
   overflow-x: hidden;
   transition: all 0.8s ease 0s;
+  z-index: 10;
 }
 
 .popup.open {
@@ -1905,6 +1913,11 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   align-items: center;
   justify-content: center;
   padding: 30px 10px;
+}
+@media (max-width: 768px) {
+  .popup__body {
+    padding: 0;
+  }
 }
 
 .popup__content {

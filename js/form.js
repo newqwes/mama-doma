@@ -13,6 +13,7 @@ jQuery(document).ready(function () {
             })
         });
         $(this).find('input, textarea').prop('disabled', true);
+        document.querySelector('.popup.open').classList.remove('open');
         event.preventDefault();
     });
 });
