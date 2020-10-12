@@ -381,7 +381,7 @@ a {
   }
 }
 .layout-2-column > * {
-  flex-basis: 49%;
+  flex-basis: 47%;
 }
 @media (max-width: 768px) {
   .layout-2-column > * {
@@ -683,17 +683,46 @@ ul.social__menu li a i.fa:hover {
 ul.social__menu li a i.fa:hover::after {
   animation: animate ease 0.6s forwards;
 }
+@media (max-width: 1024px) {
+  ul.social__menu li a i.fa {
+    color: #fff;
+    font-size: 18px;
+  }
+  ul.social__menu li a i.fa::after {
+    animation: animate ease 0.6s forwards;
+  }
+}
 ul.social__menu li a i.fa-facebook:hover::after {
   background-color: #3b5998;
+}
+@media (max-width: 1024px) {
+  ul.social__menu li a i.fa-facebook::after {
+    background-color: #3b5998;
+  }
 }
 ul.social__menu li a i.fa-vk:hover::after {
   background-color: #00aced;
 }
+@media (max-width: 1024px) {
+  ul.social__menu li a i.fa-vk::after {
+    background-color: #00aced;
+  }
+}
 ul.social__menu li a i.fa-instagram:hover::after {
   background-color: #8a3ab9;
 }
+@media (max-width: 1024px) {
+  ul.social__menu li a i.fa-instagram::after {
+    background-color: #8a3ab9;
+  }
+}
 ul.social__menu li a i.fa-odnoklassniki:hover::after {
   background-color: #ff8800;
+}
+@media (max-width: 1024px) {
+  ul.social__menu li a i.fa-odnoklassniki::after {
+    background-color: #ff8800;
+  }
 }
 
 @keyframes animate {
@@ -754,6 +783,18 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
 .ico_arrow:hover {
   opacity: 1;
   background-color: #fecc162a;
+}
+@media (max-width: 768px) {
+  .ico_arrow {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media (max-width: 414px) {
+  .ico_arrow {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 .logo img {
@@ -1420,8 +1461,15 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
 }
 
 .about-us {
-  padding: 120px 0;
+  padding: 60px 0;
   color: #ffffff;
+}
+
+.about-us__wrapper {
+  text-align: center;
+}
+.about-us__wrapper h2 {
+  padding-bottom: 30px;
 }
 
 .about-us__items {
@@ -1434,12 +1482,37 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   align-items: center;
   flex-direction: column;
   position: relative;
+  margin-bottom: 15px;
 }
 .about-us__items a,
 .about-us__items h3,
 .about-us__items span {
   transform: translateY(20px);
   margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .about-us__items a,
+.about-us__items h3,
+.about-us__items span {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 768px) {
+  .about-us__items h3 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 2.6rem;
+  }
+}
+@media (max-width: 414px) {
+  .about-us__items h3 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 2.4rem;
+    padding: 0 20px;
+  }
 }
 .about-us__items button {
   cursor: pointer;
@@ -1473,15 +1546,31 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
 .about-us__items:hover::before, .about-us__items:hover::after {
   transform: scale(1);
 }
+@media (max-width: 768px) {
+  .about-us__items:before, .about-us__items::after {
+    transform: scale(1);
+  }
+}
 .about-us__items:hover a, .about-us__items:hover h3, .about-us__items:hover button, .about-us__items:hover span {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
   z-index: 10;
 }
+@media (max-width: 768px) {
+  .about-us__items a,
+.about-us__items h3,
+.about-us__items button,
+.about-us__items span {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+  }
+}
 
 .about-us__work {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/about_us_people.JPG");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/about_us_people.JPG") center;
   background-size: cover;
   transform: translate(0, -20%);
   transition: all 0.8s ease 0s;
@@ -1514,6 +1603,31 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   background-repeat: no-repeat;
   background-position: top, bottom;
 }
+@media (max-width: 1366px) {
+  .map {
+    background-size: 150% 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .map {
+    background-size: 210% 50px;
+  }
+}
+@media (max-width: 768px) {
+  .map {
+    background-size: 350% 50px;
+  }
+}
+@media (max-width: 414px) {
+  .map {
+    background-size: 480% 50px;
+  }
+}
+@media (max-width: 320px) {
+  .map {
+    background-size: 520% 50px;
+  }
+}
 
 .feedback__layout {
   display: grid;
@@ -1521,15 +1635,60 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   grid-gap: 20px;
   grid-template-rows: 1fr;
 }
+@media (max-width: 768px) {
+  .feedback__layout {
+    grid-template-columns: 1fr;
+  }
+}
 
 .contacts__item {
   display: grid;
   grid-template-columns: 1fr 20px;
   grid-template-rows: 1fr;
 }
+@media (max-width: 768px) {
+  .contacts__item {
+    grid-template-columns: 1fr;
+  }
+}
 
 .map__wrapper {
   text-align: center;
+}
+
+.feedback__contacts > div:nth-child(1) {
+  transform: translate(-100%, 0%);
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+}
+
+.feedback__contacts > div:nth-child(2) {
+  transform: translate(-100%, 0%);
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+}
+
+.feedback__contacts > div:nth-child(3) {
+  transition: all 0.4s ease 1s;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.feedback__contacts._active > div:nth-child(1) {
+  transform: translate(0%, 0%);
+  transition: all 0.8s ease 0s;
+  opacity: 1;
+}
+
+.feedback__contacts._active > div:nth-child(2) {
+  transform: translate(0%, 0%);
+  transition: all 0.8s ease 0.3s;
+  opacity: 1;
+}
+
+.feedback__contacts._active > div:nth-child(3) {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .map__yandex {
@@ -1538,6 +1697,16 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   transform: translate(0, 20%);
   transition: all 0.8s ease 0s;
   opacity: 0;
+}
+@media (max-width: 768px) {
+  .map__yandex {
+    height: 350px;
+  }
+}
+@media (max-width: 414px) {
+  .map__yandex {
+    height: 250px;
+  }
 }
 .map__yandex._active {
   transform: translate(0px, 0px);
@@ -1552,6 +1721,14 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   text-align: right;
   color: #362823;
   padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .contacts__item {
+    text-align: center;
+  }
+  .contacts__item span {
+    display: none;
+  }
 }
 .contacts__item a {
   font-size: 1.8rem;
@@ -1572,9 +1749,7 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   padding-bottom: 8px;
 }
 
-.map__social-links *,
-.map__social-links ::before,
-.map__social-links ::after {
+.map__social-links * {
   box-sizing: content-box;
 }
 .map__social-links h4 {
@@ -1591,6 +1766,13 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .footer__wrapper,
+.footer__contacts {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .footer__wrapper a,
 .footer__contacts a {
   color: #fecc16;
@@ -1600,6 +1782,21 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   font-style: normal;
   line-height: 2.4rem;
 }
+@media (max-width: 414px) {
+  .footer__wrapper a,
+.footer__contacts a {
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__contacts {
+    flex-wrap: wrap;
+  }
+}
 
 .footer__logo {
   width: 212px;
@@ -1607,9 +1804,19 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   background-image: url("../../img/mama-doma-title.svg");
   background-repeat: no-repeat;
 }
+@media (max-width: 768px) {
+  .footer__logo {
+    margin-bottom: 10px;
+  }
+}
 
 .footer__items {
   margin-left: 20px;
+}
+@media (max-width: 768px) {
+  .footer__items {
+    margin: 10px 0 10px 20px;
+  }
 }
 
 .footer__wrapper_developer {
@@ -1620,12 +1827,44 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
 .footer__wrapper_developer span {
   color: #fffaf6;
 }
+@media (max-width: 768px) {
+  .footer__wrapper_developer {
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5rem;
+  }
+}
+@media (max-width: 414px) {
+  .footer__wrapper_developer {
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.4rem;
+  }
+}
 .footer__wrapper_developer a {
   color: #fecc16;
   font-size: 1.8rem;
   font-weight: normal;
   font-style: normal;
   line-height: 2.4rem;
+}
+@media (max-width: 768px) {
+  .footer__wrapper_developer a {
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5rem;
+  }
+}
+@media (max-width: 414px) {
+  .footer__wrapper_developer a {
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.4rem;
+  }
 }
 
 .popup {
@@ -1693,9 +1932,48 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   font-size: 4rem;
   margin-bottom: 1em;
 }
+@media (max-width: 768px) {
+  .popup__title {
+    font-size: 3.2rem;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 3.4rem;
+  }
+}
+@media (max-width: 414px) {
+  .popup__title {
+    font-size: 2.8rem;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup__text {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 414px) {
+  .popup__text {
+    font-size: 1.4rem;
+  }
+}
 
 .form-inner {
   padding: 30px;
+}
+@media (max-width: 768px) {
+  .form-inner {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+}
+@media (max-width: 414px) {
+  .form-inner {
+    font-size: 1.4rem;
+    padding: 5px;
+  }
 }
 
 .form-inner input,
@@ -1704,7 +1982,7 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   width: 100%;
   padding: 0 20px;
   margin-bottom: 20px;
-  background: #E9EFF6;
+  background: #e9eff6;
   line-height: 40px;
   border-width: 0;
   border-radius: 20px;

@@ -38,6 +38,14 @@
             opacity: 1;
             background-color: #fecc162a;
         }
+        @include media-tablet-768 {
+            width: 42px;
+            height: 42px;
+        }
+        @include media-mobile-414 {
+            width: 36px;
+            height: 36px;
+        }
     }
 }
 

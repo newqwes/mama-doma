@@ -62,4 +62,18 @@
 .popup__title {
     font-size: 4rem;
     margin-bottom: 1em;
+    @include media-tablet-768 {
+        @include font(3.2rem, 3.4rem);
+    }
+    @include media-mobile-414 {
+        @include font(2.8rem, 3rem);
+    }
+}
+.popup__text {
+    @include media-tablet-768 {
+        font-size: 1.5rem;
+    }
+    @include media-mobile-414 {
+        font-size: 1.4rem;
+    }
 }
