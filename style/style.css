@@ -683,11 +683,11 @@ ul.social__menu li a i.fa::after {
   border-radius: 40px;
   background-color: #9e9e9e;
 }
-ul.social__menu li a i.fa:hover {
+ul.social__menu li a i.fa:hover, ul.social__menu li a i.fa.hover {
   color: #fff;
   font-size: 18px;
 }
-ul.social__menu li a i.fa:hover::after {
+ul.social__menu li a i.fa:hover::after, ul.social__menu li a i.fa.hover::after {
   animation: animate ease 0.6s forwards;
 }
 @media (max-width: 1024px) {
@@ -699,7 +699,8 @@ ul.social__menu li a i.fa:hover::after {
     animation: animate ease 0.6s forwards;
   }
 }
-ul.social__menu li a i.fa-facebook:hover::after {
+ul.social__menu li a i.fa-facebook:hover::after,
+ul.social__menu li a i.fa-facebook.hover::after {
   background-color: #3b5998;
 }
 @media (max-width: 1024px) {
@@ -707,7 +708,8 @@ ul.social__menu li a i.fa-facebook:hover::after {
     background-color: #3b5998;
   }
 }
-ul.social__menu li a i.fa-vk:hover::after {
+ul.social__menu li a i.fa-vk:hover::after,
+ul.social__menu li a i.fa-vk.hover::after {
   background-color: #00aced;
 }
 @media (max-width: 1024px) {
@@ -715,7 +717,8 @@ ul.social__menu li a i.fa-vk:hover::after {
     background-color: #00aced;
   }
 }
-ul.social__menu li a i.fa-instagram:hover::after {
+ul.social__menu li a i.fa-instagram:hover::after,
+ul.social__menu li a i.fa-instagram.hover::after {
   background-color: #8a3ab9;
 }
 @media (max-width: 1024px) {
@@ -723,7 +726,8 @@ ul.social__menu li a i.fa-instagram:hover::after {
     background-color: #8a3ab9;
   }
 }
-ul.social__menu li a i.fa-odnoklassniki:hover::after {
+ul.social__menu li a i.fa-odnoklassniki:hover::after,
+ul.social__menu li a i.fa-odnoklassniki.hover::after {
   background-color: #ff8800;
 }
 @media (max-width: 1024px) {
@@ -778,6 +782,11 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   background-image: url("../../img/icons/place.svg");
   width: 20px;
   height: 20px;
+}
+.ico_question {
+  background-image: url("../../img/icons/1.svg");
+  width: 22px;
+  height: 22px;
 }
 .ico_arrow {
   background-image: url("../../img/icons/up-arrow.svg");
@@ -1663,20 +1672,14 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
   text-align: center;
 }
 
-.feedback__contacts > div:nth-child(1) {
+.feedback__contacts > div:nth-child(n) {
   transform: translate(-100%, 0%);
   transition: all 0.8s ease 0s;
   opacity: 0;
 }
 
-.feedback__contacts > div:nth-child(2) {
-  transform: translate(-100%, 0%);
-  transition: all 0.8s ease 0s;
-  opacity: 0;
-}
-
-.feedback__contacts > div:nth-child(3) {
-  transition: all 0.4s ease 1s;
+.feedback__contacts > div:last-child {
+  transition: all 0.4s ease 1.2s;
   transform: scale(0);
   opacity: 0;
 }
@@ -1689,25 +1692,67 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
 
 .feedback__contacts._active > div:nth-child(2) {
   transform: translate(0%, 0%);
-  transition: all 0.8s ease 0.3s;
+  transition: all 0.8s ease 0.1s;
   opacity: 1;
 }
 
 .feedback__contacts._active > div:nth-child(3) {
+  transform: translate(0%, 0%);
+  transition: all 0.8s ease 0.2s;
+  opacity: 1;
+}
+
+.feedback__contacts._active > div:nth-child(4) {
+  transform: translate(0%, 0%);
+  transition: all 0.8s ease 0.3s;
+  opacity: 1;
+}
+
+.feedback__contacts._active > div:nth-child(5) {
+  transform: translate(0%, 0%);
+  transition: all 0.8s ease 0.4s;
+  opacity: 1;
+}
+
+.feedback__contacts._active > div:nth-child(6) {
+  transform: translate(0%, 0%);
+  transition: all 0.8s ease 0.5s;
+  opacity: 1;
+}
+
+.feedback__contacts._active > div:nth-child(7) {
+  transform: translate(0%, 0%);
+  transition: all 0.8s ease 0.6s;
+  opacity: 1;
+}
+
+.feedback__contacts._active > div:nth-child(8) {
+  transform: translate(0%, 0%);
+  transition: all 0.8s ease 0.7s;
+  opacity: 1;
+}
+
+.feedback__contacts._active > div:nth-child(9) {
+  transform: translate(0%, 0%);
+  transition: all 0.8s ease 0.8s;
+  opacity: 1;
+}
+
+.feedback__contacts._active > div:last-child {
   transform: scale(1);
   opacity: 1;
 }
 
 .map__yandex {
   width: 100%;
-  height: 500px;
+  height: 700px;
   transform: translate(0, 20%);
   transition: all 0.8s ease 0s;
   opacity: 0;
 }
 @media (max-width: 768px) {
   .map__yandex {
-    height: 350px;
+    height: 450px;
   }
 }
 @media (max-width: 414px) {
@@ -1727,7 +1772,7 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
 .contacts__item {
   text-align: right;
   color: #362823;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 @media (max-width: 768px) {
   .contacts__item {
@@ -1754,6 +1799,15 @@ ul.social__menu li a i.fa-odnoklassniki:hover::after {
 }
 .contacts__item p {
   padding-bottom: 8px;
+}
+.contacts__item p a {
+  font-size: 1.6rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6rem;
+  text-decoration: underline;
+  letter-spacing: 0.1rem;
+  color: #362823;
 }
 
 .map__social-links * {

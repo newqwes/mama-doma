@@ -34,7 +34,8 @@ ul.social__menu {
                     border-radius: 40px;
                     background-color: #9e9e9e;
                 }
-                &:hover {
+                &:hover,
+                &.hover {
                     color: #fff;
                     font-size: 18px;
                     &::after {
@@ -49,7 +50,8 @@ ul.social__menu {
                     }
                 }
             }
-            i.fa-facebook:hover {
+            i.fa-facebook:hover,
+            i.fa-facebook.hover {
                 &::after {
                     background-color: #3b5998;
                 }
@@ -61,7 +63,8 @@ ul.social__menu {
                     }
                 }
             }
-            i.fa-vk:hover {
+            i.fa-vk:hover,
+            i.fa-vk.hover {
                 &::after {
                     background-color: #00aced;
                 }
@@ -74,7 +77,8 @@ ul.social__menu {
                 }
             }
 
-            i.fa-instagram:hover {
+            i.fa-instagram:hover,
+            i.fa-instagram.hover {
                 &::after {
                     background-color: #8a3ab9;
                 }
@@ -86,7 +90,8 @@ ul.social__menu {
                     }
                 }
             }
-            i.fa-odnoklassniki:hover {
+            i.fa-odnoklassniki:hover,
+            i.fa-odnoklassniki.hover {
                 &::after {
                     background-color: #ff8800;
                 }
