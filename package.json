@@ -9,6 +9,6 @@
     "sass": "^1.26.11"
   },
   "scripts": {
-    "style": "sass --watch style/style.scss style/style.css"
+    "style": "sass --watch src/style/style.scss src/style/style.css"
   }
 }

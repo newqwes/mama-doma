@@ -41,7 +41,6 @@
     list-style-type: none;
     padding: 0 20px;
 
-
     a {
         color: $color-text;
         text-transform: uppercase;
@@ -92,7 +91,6 @@
     color: $color-text;
 }
 
-
 .menu-page__links {
     display: flex;
     flex-direction: column;
@@ -105,7 +103,6 @@
     transform: scale(0);
     transition: all 0.8s ease;
     opacity: 0;
-
 
     p,
     h4 {
@@ -139,6 +136,6 @@
     margin-bottom: 10px;
 
     &_0 {
-        background-image: url("../../img/IMG_8158.JPG");
+        background-image: url('../img/IMG_8158.JPG');
     }
 }
